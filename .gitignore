@@ -95,6 +95,11 @@ ENV/
 env.bak/
 venv.bak/
 
+# Node
+node_modules/
+*/node_modules/
+whatsapp-bot/session/
+
 # Spyder project settings
 .spyderproject
 .spyderworkspace

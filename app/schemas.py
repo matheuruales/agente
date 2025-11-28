@@ -2,7 +2,7 @@
 Pydantic schemas for the lead analysis API.
 """
 
-from typing import Literal, Optional
+from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -25,3 +25,18 @@ class LeadResponse(BaseModel):
     )
     urgencia: Literal["alta", "media", "baja"] = Field(..., description="Nivel de urgencia.")
     razonamiento: str = Field(..., description="Breve explicación del score.")
+
+
+class TopZona(BaseModel):
+    zona: str
+    count: int
+
+
+class AnalyticsSummary(BaseModel):
+    total_leads: int
+    lead_score_counts: Dict[str, int]
+    urgency_counts: Dict[str, int]
+    tipo_propiedad_counts: Dict[str, int]
+    canal_counts: Dict[str, int]
+    avg_presupuesto: Optional[int]
+    top_zonas: List[TopZona]

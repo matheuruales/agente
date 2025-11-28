@@ -1,0 +1,17 @@
+{
+  "name": "lead-whatsapp-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp bot para calificar leads inmobiliarios usando el agente FastAPI.",
+  "main": "bot.js",
+  "type": "module",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.3.2",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
